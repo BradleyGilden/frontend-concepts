@@ -7,3 +7,8 @@
 * *Hypertext* refers to links that connect web pages to one another.
 * HTML uses 'markup' to annotate text, images, videos etc for displayy in the web blowerser.
 * HTML markup includes special elements such as : <head\>, <title\>, <body\>, <li\>, etc.
+
+Primary Learning Source for HTML:
+
+* [Learn HTML with Dave Gray @freecodecamp](https://youtu.be/kUMe1FH4CHE)
+* [w3schools](https://www.w3schools.com/html/html_intro.asp)
