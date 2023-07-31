@@ -1,3 +1,3 @@
-# Lesson 01: Basic Structure
+# Lesson 02: Head Element
 
-This is lesson 1 of David Gray's Tutorial along with some personal notes and modification
+This is lesson 2 of David Gray's Tutorial along with some personal notes and modification
