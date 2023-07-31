@@ -12,19 +12,52 @@
 
     <body>
         <h1>List Types</h1>
+
         <hr>
-        <h2>Ordered lists:</h2>
-            <ol>
-                <li>Bacon</li>
-                <li>Eggs</li>
-                <li>Tomato</li>
-            </ol>
-        <h2>Unordered lists</h2>
-            <ul>
-                <li>Beans</li>
-                <li>Lettuce</li>
-                <li>Potato</li>
-            </ul>
+
+        <h2>Carnivore Breakfast:</h2>
+
+        <ol> <!--ordered list: 1,2,3 etc-->
+            <li>Bacon
+                <ul>
+                    <li>streaky</li> <!--nested unordered list in ordered list-->
+                    <li>backbone</li>
+                </ul>
+            </li>
+            <li>Eggs</li>
+            <li>Sausage</li>
+        </ol>
+
+        <hr>
+
+        <h2>Vegan Breakfast</h2>
+        <ul> <!--unordered list *,*,*-->
+            <li>Beans
+                <ol>
+                    <li>sugar beans</li>
+                    <li>broad beans</li>
+                </ol>
+            </li>
+            <li>Toast</li>
+            <li>Avacado</li>
+        </ul>
+
+        <hr>
+
+        <h2>Omnivore Breakfast</h2>
+        <dl> <!--description term-->
+            <dt>Bacon</dt> <!--description term-->
+                <dd>streaky</dd> <!--description detail-->
+                <dd>crispy</dd>
+            <dt>Eggs</dt>
+                <dd>crispy</dd>
+            <dt>Avacado</dt>
+                <dd>butter</dd>
+            <dt>Toast</dt>
+                <dd>golden brown</dd>
+
+        </dl>
+
         <hr>
         &lt;&lt;&lt; &copy; Bradley Gilden &gt;&gt;&gt;
     </body>
