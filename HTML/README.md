@@ -13,4 +13,5 @@ format linter: [W3C validator](https://validator.w3.org)
 Primary Learning Source for HTML:
 
 * [Learn HTML with Dave Gray @freecodecamp](https://youtu.be/kUMe1FH4CHE)
+* [HTML and CSS Full Course @BroCode](https://youtu.be/HGTJBPNC-Gw)
 * [w3schools](https://www.w3schools.com/html/html_intro.asp)
