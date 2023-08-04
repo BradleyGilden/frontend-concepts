@@ -1,3 +1,3 @@
-# Lesson 03: Text Basics
+# Lesson 06: Text Basics
 
-This is lesson 3 of David Gray's Tutorial along with some personal notes and modification
+This is part of Bro Codes HTML and CSS Tutorial along with some personal notes and modifications
