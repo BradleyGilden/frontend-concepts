@@ -10,5 +10,48 @@
     </head>
 
     <body>
+        <h1 align="center">Forms</h1>
+        <center>
+        <form action="index.php" method="POST">
+            <label for="username">username:</label>
+            <input type="text" id="username" placeholder="MyUserName3" minlength="6" maxlength="12" required>
+            <br><br>
+            <label for="password">password: </label> <!--for needs to match id-->
+            <input type="text" id="password" placeholder="1234" pattern="[\d]{4}" required>
+            <br><br>
+            <label for="email">e-mail: </label>
+            <input type="text" id="email" placeholder="myemail@service.com" pattern="[\w]*@[\w]*\.(com|ru|uk|co\.za)" required>
+            <br><br>
+            <label for="phone">phone No.</label>
+            <select>
+                <option >+27</option>
+                <option >+44</option>
+                <option >+61</option>
+                <option >+49</option>
+                <option >+33</option>
+                <option >+81</option>
+                <option >+86</option>
+                <option >+91</option>
+                <option >+55</option>
+                <option >+234</option>
+            </select>
+            <input type="tel" placeholder="74-475-8919" pattern="\d{3}-\d{3}-\d{4}" required>
+            <br><br>
+            <label for="birthday">birthday:</label>
+            <input type="date">
+            <br><br>
+            <label for="roption">title: &nbsp</label>
+            <label for="Mr">Mr</label>
+            <input type="radio" name="roption" id="Mr">
+            <label for="Ms">Ms</label>
+            <input type="radio" name="roption" id="Ms">
+            <label for="Mrs">Mrs</label>
+            <input type="radio" name="roption" id="Mrs">
+
+            <br><br><br>
+            <input type="reset">
+            <input type="submit">
+        </form>
+        </center>
     </body>
 </html>
