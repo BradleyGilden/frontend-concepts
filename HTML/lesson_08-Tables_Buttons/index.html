@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="author" content="Bradley Gilden">
-        <meta name="description" content="Page includes implementation of CSS tables">
-        <meta name="keywords" content="CSS,tables,stylesheet">
+        <meta name="description" content="Page includes implementation of HTML tables">
+        <meta name="keywords" content="HTML,CSS,tables,stylesheet">
         <link rel="stylesheet" href="main.css">
         <title>Tables</title>
     </head>
@@ -49,11 +49,36 @@
                 <td>9-5</td>
                 <td>10-2</td>
             </tr>
-
         </table>
+
         <br>
         <hr>
         <h1 align="center">Buttons</h1>
+        <center>
+        <a href="https://www.youtube.com/channel/UC4SVo0Ue36XCfOyb5Lh1viQ">
+        <button style="background-color: white;border-radius: 10px">click me</button>
+        </a>
+        </center>
 
+        <br><br><br>
+
+        <center>
+            <button onclick="dosomething()" style="background-color: white;border-radius: 10px">change text</button>
+            <p id="greeting">Hello</p>
+        </center>
+        <!--not necessary but the code just changes the state of the paragraph upon click-->
+        <script>
+            function dosomething(){
+                const paragraph = document.getElementById("greeting");
+                const text = paragraph.textContent;
+                if (text === "Hello"){
+                    paragraph.innerHTML = "Goodbye"
+                }
+                else{
+                    paragraph.innerHTML = "Hello"
+                }
+            }
+
+        </script>
     </body>
 </html>
