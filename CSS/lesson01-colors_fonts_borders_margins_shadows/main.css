@@ -1,24 +1,68 @@
+/*                             fonts                                             */
+@font-face{
+    src: url(fonts/LibreBarcode128Text-Regular.ttf);  /*for local non-standard fonts*/
+    font-family: 'Libre Barcode';
+}
 body{
     background-color: rgba(4, 1, 40, 0.877);
 }
 
+h1{
+    text-align: center;
+}
+
 #p1{
     color: red;
-    font-family: verdana, arial;
+    font-family: verdana, arial;  /*font types with other options if not supported*/
 }
 
 #p2{
-    color: #ffff00;
+    color: #ffff00;  /*color denotes font color*/
     font-family: 'Lucida Sans';
-    font-size: 23px;
-    font-weight: bold;
+    font-size: 1.5em; /*em is percentage, 1em=100% and 1.5=150%*/
+    font-weight: bold;  /*font thickness*/
     font-style: italic;
 }
 
 #p3{
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255); /*there are different formats for color*/
+    font-family: 'Dancing Script', cursive; /*google font*/
+    font-size: 1.2em;
 }
 
 #p4{
     color: hsl(120, 97%, 45%);
+    font-family: 'Libre Barcode', 'Times New Roman', Times, serif; /*using local non-standard font*/
+    font-size: 2.5em;
+}
+
+/*                            Borders                               */
+
+#h2a{
+    border-style: solid;
+    border-width: 3px;                /*can use border: 3px solid rgb(5, 205, 5)*/
+    border-color: rgb(5, 205, 5);
+    border-radius: 15px;
+}
+
+#p5{
+    /*             width style colour                          */
+    border-bottom: 3px solid red;
+    border-top: 3px dotted yellow;
+    border-radius: 20px;
+}
+
+/*                             Text Shadows and Box Shadows                  */
+
+#shadowtxt{
+    /*          horizonta vertical blur color*/
+    text-shadow: 3px 3px 3px blue;
+}
+
+#shadowbox1{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(246, 148, 2);
+    margin: 0 auto;
+    box-shadow: 6px 5px 4px red;
 }
