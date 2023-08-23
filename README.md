@@ -7,7 +7,7 @@ This repository contains front-end concepts to cover in depth as milestones
 ## Milestones reached/in progress:
 
 * HTML  :heavy_check_mark:
-* CSS   :x:
+* CSS   :heavy_check_mark:
 * JavaScript :x:
 * TypeScript :x:
 * React :x:
