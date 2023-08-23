@@ -1,0 +1,79 @@
+#hplogo {
+    position: inherit;
+    width: 300px;
+    float: left;
+    padding: 30px 0px;
+}
+
+#wand {
+    width: 150px;
+    float: right;
+}
+
+.block {
+    background-color: white;
+    margin: 0px auto;
+    border: 3px solid black;
+    width: 90%;
+}
+
+span {
+    background-color: yellow;
+}
+
+#ibspan {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding-top: 15px;
+    text-align: center;
+    box-sizing: border-box; /*prevents adding extra height if padding is added*/
+}
+
+.container {
+    border: 3px solid black;
+    width: 50%;
+    margin: 0px auto;
+    background-color: white;
+    padding: 30px;
+    display: flow-root; /*allows floating objects to not escape the container*/
+    height: 300px;
+    overflow: auto;  /*creates a scroll bar if content exceeds containers height*/
+}
+
+body {
+    background-color: rgb(125, 0, 0);
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    text-shadow: 3px 3px 3px black;
+}
+
+.container::-webkit-scrollbar-thumb { /*styling the scroll bar thumb*/
+    background-color: red;
+}
+
+.container::-webkit-scrollbar-thumb:hover{ /*styling the scroll bar thumb*/
+    background-color: rgb(125, 0, 0);
+}
+
+.container::-webkit-scrollbar-thumb:active{ /*styling the scroll bar thumb*/
+    background-color: rgb(0, 0, 0);
+}
+
+
+.container::-webkit-scrollbar {
+    width: 10px
+}
+
+.container::-webkit-scrollbar-button{
+    background-color: red;
+}
+.container::-webkit-scrollbar-button:hover{ /*styling the scroll bar thumb*/
+    background-color: rgb(125, 0, 0);
+}
+.container::-webkit-scrollbar-button:active{ /*styling the scroll bar thumb*/
+    background-color: rgb(0, 0, 0);
+}
