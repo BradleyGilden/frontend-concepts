@@ -1,6 +1,21 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
 #box {
     width: 200px;
     height: 200px;
     background-color: blueviolet;
     position: relative;
+    top: 100px; /*positioned relative to it's container*/
+    left: 100px;
+}
+
+#box2 {
+    width: 15%;
+    height: 15vw;
+    background-color: blueviolet;
+    position: fixed; /* relative to viewport */
+    right: 43%; /*stays where it is*/
 }
