@@ -1,0 +1,23 @@
+#container {
+	border: 2px solid black;
+}
+
+/*descendant combinator uses spaces*/
+#container p{
+	background-color: purple;
+}
+
+/*child combinator*/
+#container > p {
+	background-color: red;
+}
+
+/*sibling combinator*/
+#container ~ p {
+	background-color: green;
+}
+
+/*adjacent siblings only*/
+#container + p {
+	background-color: gold;
+}

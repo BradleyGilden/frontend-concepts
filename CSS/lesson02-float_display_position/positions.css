@@ -12,9 +12,17 @@
     left: 100px;
 }
 
+#boxalt {
+    width: 60px;
+    height: 60px;
+    margin: 70px;
+    background-color: rgb(0, 58, 216);
+    position: absolute;  /*positioned relative to closest ancestor box2*/
+}
+
 #box2 {
-    width: 15%;
-    height: 15vw;
+    width: 200px;
+    height: 200px;
     background-color: blueviolet;
     position: fixed; /* relative to viewport */
     right: 43%; /*stays where it is*/
