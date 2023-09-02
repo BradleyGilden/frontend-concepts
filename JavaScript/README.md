@@ -1,6 +1,6 @@
 <h1 align="center">JavaScript</h1>
 
-<img src="images/logo.svg.png" width=50px style="float: left;margin-top: -67px">
+<p align="center"><img src="images/logo.svg.png" width=200px></p>
 
 JavaScript is a versatile and widely-used programming language, and it has many interesting and cool facts associated with it. Here are some:
 
