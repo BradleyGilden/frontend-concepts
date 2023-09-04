@@ -24,7 +24,8 @@ let sage="21"
 let height=5.9;
 let student=true;
 
-console.log(`${name} ${age} ${height}ft, student=${student}`); //using format
+//template literals
+console.log(`${name} ${age} ${height}ft, student=${student}`);
 console.log()
 
 sage = sage + 1 //contcatenates 1 instead of adds

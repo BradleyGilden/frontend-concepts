@@ -32,3 +32,14 @@ console.log(word.slice(0, 5))
 console.log(word.charAt(4).toUpperCase())
 
 //if statements are same as c,c++, java
+
+//toLocaleString() - returns language sensitive representation of data
+
+let num = 123456.789
+
+console.log(`${num} represented with en-US: `, num.toLocaleString("en-US"))
+console.log(`${num} represented with hi-IN: `, num.toLocaleString("hi-IN"))
+console.log(`${num} represented with de-DE: `, num.toLocaleString("de-DE"))
+
+console.log(`${num} en-US style: `, num.toLocaleString("en-US", {style: "currency", currency: "USD"}))
+
