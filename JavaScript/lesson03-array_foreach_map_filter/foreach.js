@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-//callback - applies callback function for each element in array
+//forEach - applies callback function for each element in array
 
 main();
 function main(){
