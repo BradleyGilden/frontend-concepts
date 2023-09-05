@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 //callback - function passed as an argument to another function
+// similar to function pointers in c
 
 main();
 
