@@ -10,6 +10,7 @@ function main(){
     array = [1, 2, 3]
     sqarray = array.map(square)
     console.log(sqarray)
+    console.log(array)
 }
 
 function square(num){
