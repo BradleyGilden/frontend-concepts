@@ -13,3 +13,8 @@ const add = function(x, y) {
 const result = add(2, 3)
 
 console.log(result)
+
+/* you can also use a throw away onclick method for your buttom elements:
+document.getElementById('buttonId').onclick = function(){
+    do something
+} */
