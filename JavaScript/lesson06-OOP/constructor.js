@@ -16,5 +16,5 @@ class Student {
     }
 }
 
-james = new Student(18, 'James', 4.0)
+const james = new Student(18, 'James', 4.0)
 james.info()

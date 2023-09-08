@@ -35,8 +35,8 @@ class Player {
     }
 }
 
-p1 = new Player()
-p2 = new Player()
+const p1 = new Player()
+const p2 = new Player()
 
 p1.win()
 p1.draw()

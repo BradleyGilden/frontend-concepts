@@ -20,8 +20,8 @@ class Fish extends Animal {
     }
 }
 
-a1 = new Animal();
-f1 = new Fish();
+const a1 = new Animal();
+const f1 = new Fish();
 
 a1.sleep();
 console.log()

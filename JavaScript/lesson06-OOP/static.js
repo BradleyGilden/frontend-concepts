@@ -17,9 +17,9 @@ class Car {
     }
 }
 
-c1 = new Car();
-c2 = new Car();
-c3 = new Car();
+const c1 = new Car();
+const c2 = new Car();
+const c3 = new Car();
 
 console.log(Car.carCount)
 Car.displayNum()
