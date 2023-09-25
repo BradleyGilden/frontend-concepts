@@ -20,6 +20,12 @@ body {
     height: 450px;
 }
 
+.main-content .quote {
+    font-family: 'Bigelow Rules', cursive;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
 .header {
     font-size: 1.2rem;
     border: solid 2px white;
@@ -42,7 +48,7 @@ body {
 
 .main-content .text-area {
     font-size: 1.5rem;
-    line-height: 1.5;
+    line-height: 1;
 }
 
 .main-content .person {
