@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+while read -r file
+do
+    touch "$file"
+    echo '#!/usr/bin/env node' > "$file"
+    chmod +x "$file"
+    current_date=$(date +%d-%m-%Y)
+    echo "
+/**
+ * <module docstring>
+ * Author: Bradley Dillion Gilden
+ * Date: $current_date
+ */" >> "$file"
+done

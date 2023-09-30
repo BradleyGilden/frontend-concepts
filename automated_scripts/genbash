@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+while read -r file
+do
+	touch "$file"
+	echo '#!/bin/bash' > "$file"
+	echo '# comment' >> "$file"
+	chmod +x "$file"
+done

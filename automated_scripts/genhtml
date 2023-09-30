@@ -1,0 +1,29 @@
+#!/bin/bash
+# generates base html doc
+
+sysIFS="$IFS"
+cssfile=$(ls main.scss 2>/dev/null)
+if [ 'main.scss' != "$cssfile" ]; then
+    touch main.scss
+fi
+echo "* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}" > main.scss
+while read -r file; do
+    IFS='~' read -ra args <<< "$file"
+    IFS="$sysIFS"
+    echo "<!DOCTYPE html>
+<html lang=\"en\">
+    <head>
+        <title>${args[1]}</title>
+        <meta charset=\"UTF-8\">
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+        <link rel=\"stylesheet\" href=\"main.css\">
+    </head>
+    <body>
+    </body>
+</html>" > "${args[0]}"
+done
