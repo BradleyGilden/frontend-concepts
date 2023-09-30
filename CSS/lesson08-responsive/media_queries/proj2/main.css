@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0px 5px;
+}
+* body {
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+.container {
+  height: 100vh;
+}
+
+.header {
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  font-size: 4vw;
+}
+.header__menu {
+  display: flex;
+  font-size: 2.5vw;
+  gap: 15px;
+}
+
+.main {
+  height: 80%;
+  display: flex;
+}
+.main__image {
+  background-image: url("./imgs/Portrait.png");
+  width: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.main__text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main__text-1 {
+  font-size: 10vw;
+}
+.main__text-2, .main__text-3, .main__text-4 {
+  font-size: 5vw;
+}
+
+.footer {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-end;
+  margin-right: 10%;
+}
+.footer [class^=footer__] img {
+  width: 5.3vw;
+}
+
+#size {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: red;
+}
+
+@media (max-width: 650px) {
+  .header {
+    justify-content: center;
+  }
+  .header__logo {
+    font-size: 9vw;
+  }
+  .header__menu {
+    display: none;
+  }
+  .main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main__image {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background-size: 100%;
+  }
+  .main__text {
+    width: 100%;
+  }
+  .main__text-1 {
+    display: none;
+  }
+  .main__text-2, .main__text-3, .main__text-3, .main__text-4 {
+    font-size: 2rem;
+  }
+  .footer {
+    justify-content: center;
+    margin: 0px;
+  }
+  .footer [class^=footer__] img {
+    width: 45px;
+    height: 45px;
+  }
+}/*# sourceMappingURL=main.css.map */
