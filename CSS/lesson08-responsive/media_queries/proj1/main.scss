@@ -1,0 +1,60 @@
+$color-mob: #cdb4db; // Mobile
+$color-tab: #fff1e6; // Tablet
+$color-lap: #52b788; // Laptop
+$color-pc: #bee1e6; // Desktop
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 35px;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+#size {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+}
+
+@media (max-width: $desktop) {
+
+    .container {
+        background-color: $color-pc;
+    }
+}
+@media (max-width: $laptop) {
+
+    .container {
+        background-color: $color-lap;
+    }
+}
+@media (max-width: $tablet) {
+
+    .container {
+        background-color: $color-tab;
+    }
+}
+@media (max-width: $mobile) {
+
+    .container {
+        background-color: $color-mob;
+    }
+}
