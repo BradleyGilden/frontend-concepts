@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-* body {
+
+body {
   background-image: url("./imgs/background.jpg");
   background-size: cover;
   background-position: center;
@@ -69,4 +70,27 @@
   height: 60%;
   border-radius: 20px;
   box-shadow: 0px 0px 7px white;
-}/*# sourceMappingURL=main.css.map */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 4px;
+  padding: 20px;
+}
+
+.button {
+  color: blue;
+  font-weight: 600;
+  font-size: 25px;
+  background-color: white;
+  display: grid;
+  place-content: center;
+  border-radius: 10px;
+}
+.button.div, .button.min {
+  font-size: 30px;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+}/*# sourceMappingURL=calc.css.map */

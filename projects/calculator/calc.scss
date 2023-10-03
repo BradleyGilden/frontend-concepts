@@ -1,20 +1,24 @@
 $pixelfy: 'Pixelify Sans', sans-serif;
 $screen-col: rgba(26, 86, 26, 0.652);
 $calc-col: rgba(0, 0, 255, 0.349);
-$button-col: rgba(0, 6, 48, 0.447);
+$keypad-col: rgba(0, 6, 48, 0.447);
+$num-col: blue;
+$key-col: white;
+$border-col: white;
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    body {
-        background-image: url('./imgs/background.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 100vw;
-        height: 100vh;
-    }    
 }
+
+body {
+    background-image: url('./imgs/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}    
 
 .header {
     height: 10%;
@@ -36,7 +40,7 @@ $button-col: rgba(0, 6, 48, 0.447);
 }
 
 .calc {
-    border: 4px solid white;
+    border: 4px solid $border-col;
     width: 400px;
     padding: 20px;
     height: 80%;
@@ -47,7 +51,7 @@ $button-col: rgba(0, 6, 48, 0.447);
     flex-direction: column;
     &__screen {
         height: 20%;
-        border: 3px solid white;
+        border: 3px solid $border-col;
         background-color: $screen-col;
         display: flex;
         flex-direction: column;
@@ -64,9 +68,34 @@ $button-col: rgba(0, 6, 48, 0.447);
         }
     }
     &__buttons {
-        background-color: $button-col;
+        background-color: $keypad-col;
         height: 60%;
         border-radius: 20px;
-        box-shadow: 0px 0px 7px white;
+        box-shadow: 0px 0px 7px $border-col;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 4px;
+        padding: 20px;
+    }
+}
+
+.button {
+    color:  $num-col;
+    font-weight: 600;
+    font-size: 25px;
+    background-color: white;
+    display: grid;
+    place-content: center;
+    border-radius: 10px;
+
+    &.div, &.min{
+        font-size: 30px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: $num-col;
+        color: $key-col;
     }
 }
