@@ -20,7 +20,7 @@ body {
   text-align: center;
   line-height: 8vh;
   font-family: "Pixelify Sans", sans-serif;
-  font-size: 4vw;
+  font-size: max(4vw, 2.7rem);
   color: white;
   padding-top: 5px;
 }
@@ -33,7 +33,7 @@ body {
 }
 
 .calc {
-  border: 4px solid white;
+  border: 4px solid rgb(53, 53, 53);
   width: 400px;
   padding: 20px;
   height: 80%;
@@ -44,32 +44,28 @@ body {
   flex-direction: column;
 }
 .calc__screen {
-  height: 20%;
-  border: 3px solid white;
+  height: 15%;
+  border: 3px solid rgb(53, 53, 53);
   background-color: rgba(26, 86, 26, 0.652);
   display: flex;
   flex-direction: column;
+  justify-content: end;
 }
-.calc__screen--input {
-  height: 40%;
-  background: none;
-  border: none;
-  color: rgb(255, 255, 255);
-  font-weight: 500;
-}
-.calc__screen--input::-moz-placeholder {
-  color: rgb(227, 236, 53);
-  text-align: center;
-}
-.calc__screen--input::placeholder {
-  color: rgb(227, 236, 53);
-  text-align: center;
+.calc__screen--output {
+  overflow-x: auto;
+  color: white;
+  height: 100%;
+  width: 100%;
+  line-height: 100%;
+  text-align: end;
+  padding: 10px;
+  font-size: 2.3rem;
 }
 .calc__buttons {
   background-color: rgba(0, 6, 48, 0.447);
   height: 60%;
   border-radius: 20px;
-  box-shadow: 0px 0px 7px white;
+  box-shadow: 0px 0px 7px rgb(53, 53, 53);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -78,10 +74,10 @@ body {
 }
 
 .button {
-  color: blue;
+  color: rgb(34, 34, 255);
   font-weight: 600;
   font-size: 25px;
-  background-color: white;
+  background-color: black;
   display: grid;
   place-content: center;
   border-radius: 10px;
@@ -89,8 +85,25 @@ body {
 .button.div, .button.min {
   font-size: 30px;
 }
+.button.eq {
+  background-color: yellow;
+}
 .button:hover {
   cursor: pointer;
-  background-color: blue;
-  color: white;
+  background-color: rgb(34, 34, 255);
+  color: black;
+}
+
+@media (max-width: 450px) {
+  .calc {
+    width: 300px;
+  }
+  .header__title {
+    font-size: 2rem;
+  }
+}
+@media (min-height: 670px) and (max-width: 450px) {
+  .calc {
+    height: 60%;
+  }
 }/*# sourceMappingURL=calc.css.map */
