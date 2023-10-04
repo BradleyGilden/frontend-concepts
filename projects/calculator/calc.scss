@@ -2,9 +2,10 @@ $pixelfy: 'Pixelify Sans', sans-serif;
 $screen-col: rgba(26, 86, 26, 0.652);
 $calc-col: rgba(0, 0, 255, 0.349);
 $keypad-col: rgba(0, 6, 48, 0.447);
-$num-col: rgb(34, 34, 255);
+$num-col: rgb(0, 255, 247);
 $key-col: black;
-$border-col: rgb(53, 53, 53);
+$border-col: rgb(15, 194, 206);
+$out-col: white;
 $s-device: 450px;
 $s-width: 300px;
 
@@ -61,7 +62,7 @@ body {
         justify-content: end;
         &--output{
             overflow-x: auto;
-            color: white;
+            color: $out-col;
             height: 100%;
             width: 100%;
             line-height: 100%;
@@ -97,7 +98,7 @@ body {
     }
 
     &.eq {
-        background-color: yellow;
+        background-color: rgb(192, 143, 46);
     }
 
     &:hover {
