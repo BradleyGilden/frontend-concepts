@@ -17,10 +17,14 @@ function main() {
   keypad.addEventListener('click', (e) => {
     key = e.target;
     if (key.classList.contains('button')) {
+      if (stdout.textContent === "Error") {
+        stdout.textContent = '';
+      }
       processKeys(key.textContent);
     }
   })
   stdout.addEventListener('click', () => {
+    operation = '';
     result = 0;
     result2 = 0;
     stdout.textContent = '';
@@ -64,30 +68,32 @@ function processKeys(key) {
 
 function calculate () {
   let num = stdout.textContent;
-  result2 = num.includes('.') ? parseFloat(num) : parseInt(num);
-  let final;
-  switch (operation) {
-    case '+':
-      final = result + result2;
-      break;
-    case '-':
-      final = result - result2;
-      break;
-    case '÷':
-      final = result / result2;
-      break;
-    case 'x':
-      final = result * result2;
-      break;
-  }
-  stdout.textContent = '';
-  console.log(stdout.textContent);
-  if (!isNaN(final)) {
+  if (!isNaN(num)) {
+    result2 = num.includes('.') ? parseFloat(num) : parseInt(num);
+    let final;
+    switch (operation) {
+      case '+':
+        final = result + result2;
+        break;
+      case '-':
+        final = result - result2;
+        break;
+      case '÷':
+        final = result / result2;
+        break;
+      case 'x':
+        final = result * result2;
+        break;
+      default:
+        return;
+    }
+    stdout.textContent = '';
+    console.log(stdout.textContent);
     stdout.textContent = final.toString();
   } else {
     stdout.textContent = "Error";
   }
-  
+  operation = '';
   result = 0;
   result2 = 0;
 }
