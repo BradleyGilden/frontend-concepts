@@ -35,33 +35,7 @@ function processKeys(key) {
   } else {
     switch (key) {
       case '=':
-        let num = stdout.textContent;
-        result2 = num.includes('.') ? parseFloat(num) : parseInt(num);
-        let final;
-        switch (operation) {
-          case '+':
-            final = result + result2;
-            break;
-          case '-':
-            final = result - result2;
-            break;
-          case '÷':
-            final = result / result2;
-            break;
-          case 'x':
-            final = result * result2;
-            break;
-        }
-        stdout.textContent = '';
-        console.log(stdout.textContent);
-        if (!isNaN(final)) {
-          stdout.textContent = final.toString();
-        } else {
-          stdout.textContent = "Error";
-        }
-        
-        result = 0;
-        result2 = 0;
+        calculate();
         return;
       case '+':
         operation = '+';
@@ -88,7 +62,7 @@ function processKeys(key) {
   }
 }
 
-function calculate(operation) {
+function calculate () {
   let num = stdout.textContent;
   result2 = num.includes('.') ? parseFloat(num) : parseInt(num);
   let final;
@@ -108,8 +82,12 @@ function calculate(operation) {
   }
   stdout.textContent = '';
   console.log(stdout.textContent);
-  stdout.textContent = final.toString();
-  console.log(final.toString(), 'to string')
+  if (!isNaN(final)) {
+    stdout.textContent = final.toString();
+  } else {
+    stdout.textContent = "Error";
+  }
+  
   result = 0;
   result2 = 0;
 }
