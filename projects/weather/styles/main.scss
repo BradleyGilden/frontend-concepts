@@ -1,5 +1,86 @@
+$blur-col: rgba(0, 0, 0, 0.395);
+$strip-col: rgba(255, 255, 255, 0.236);
+$head-col: rgba(255, 255, 255, 0.13);
+$nav-t-shadow: 0px 0px 5px black;
+$Josef-Sans: 'Josefin Sans', sans-serif;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-image: url(../imgs/backdrop.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .cover {
+        backdrop-filter: blur(10px);
+        height: 100vh;
+        width: 100vw;
+        background: $blur-col;
+
+        header {
+          height: 10%;
+          background-color: $head-col;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-inline: 20px;
+
+          .logo {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+
+            .icon {
+              width:60px;
+              background-image: url('../imgs/cloud.png');
+              background-size: contain;
+              background-repeat: no-repeat;
+              height: 60px;
+            }
+            a {
+              text-decoration: none;
+            }
+            .title {
+              font-size: 2rem;
+              color: white;
+              font-family: $Josef-Sans;
+            }
+          }
+          .nav {
+            display: flex;
+            gap: 20px;
+            .selector {
+              font-family: $Josef-Sans;
+              padding: 14px 5px;
+              border-radius: 5px;
+              text-decoration: none;
+              color: white;
+              transition: all 0.3s;
+
+              &:hover {
+                background-color: rgba(0, 0, 0, 0.222);
+              }
+              &.visited {
+                text-decoration: underline;
+                text-decoration-color: blue;
+                text-decoration-thickness: 3px;
+                text-underline-offset: 5px;
+              }
+            }
+          }
+        }
+
+        .interface {
+          height: 80%;
+          width: 100vw;
+          display: flex;
+          
+        }
+    }
 }

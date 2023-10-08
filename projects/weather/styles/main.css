@@ -2,4 +2,73 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-image: url(../imgs/backdrop.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body .cover {
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.395);
+}
+body .cover header {
+  height: 10%;
+  background-color: rgba(255, 255, 255, 0.13);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 20px;
+}
+body .cover header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .cover header .logo .icon {
+  width: 60px;
+  background-image: url("../imgs/cloud.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 60px;
+}
+body .cover header .logo a {
+  text-decoration: none;
+}
+body .cover header .logo .title {
+  font-size: 2rem;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+}
+body .cover header .nav {
+  display: flex;
+  gap: 20px;
+}
+body .cover header .nav .selector {
+  font-family: "Josefin Sans", sans-serif;
+  padding: 14px 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s;
+}
+body .cover header .nav .selector:hover {
+  background-color: rgba(0, 0, 0, 0.222);
+}
+body .cover header .nav .selector.visited {
+  text-decoration: underline;
+  text-decoration-color: blue;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5px;
+}
+body .cover .interface {
+  height: 80%;
+  width: 100vw;
+  display: flex;
 }/*# sourceMappingURL=main.css.map */
