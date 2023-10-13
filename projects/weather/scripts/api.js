@@ -7,7 +7,7 @@
  */
 
 const getJson = async () => {
-  const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=-29.8579&longitude=31.0292&hourly=temperature_2m,apparent_temperature,precipitation_probability,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_probability_max,windspeed_10m_max&current_weather=true&timezone=auto');
+  const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=-29.8579&longitude=31.0292&current=temperature_2m,relativehumidity_2m,apparent_temperature,is_day,precipitation,weathercode,windspeed_10m&hourly=temperature_2m,relativehumidity_2m,apparent_temperature,precipitation_probability,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=auto');
   const data = await response.json();https://.open-meteo.com/v1/forecast?latitude=-29.8579&lo
   return data;
 };

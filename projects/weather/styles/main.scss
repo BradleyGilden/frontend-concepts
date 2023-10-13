@@ -4,6 +4,7 @@ $head-col: rgba(255, 255, 255, 0.13);
 $nav-t-shadow: 0px 0px 5px black;
 $Josef-Sans: 'Josefin Sans', sans-serif;
 $cards: rgba(255, 255, 255, 0.444);
+$text-col: rgb(25, 25, 155);
 
 * {
     margin: 0;
@@ -98,7 +99,87 @@ body {
               text-align: center;
               font-family: $Josef-Sans;
               font-size: 1.3rem;
-              color: rgb(25, 25, 155);
+              color: $text-col;
+            }
+            &__content {
+              display: flex;
+              padding-inline: 20px;
+              justify-content: space-between;
+
+              &-widget{
+                display: flex;
+                gap: 10px;
+
+                .widget__icon{
+                  width: 120px;
+                  height: 120px;
+                  flex-grow: 1;
+                  background-image: url('../imgs/wicons/p_cloudy2.png');
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                }
+                .widget__text {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-around;
+                  align-items: center;
+                  &-temp{
+                    font-family: $Josef-Sans;
+                    font-size: 3.5rem;
+                    color: $text-col;
+                  }
+                  &-feel, &-description {
+                    font-family: $Josef-Sans;
+                    color: $text-col;
+                    font-size: 1.2rem;
+                  }
+                  &-description {
+                    padding-top: 20%;
+                    color: rgb(226, 102, 0);
+                  }
+                }
+
+              }
+
+              &-stats{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: start;
+
+                .stats__prec, .stats__wind, .stats__date {
+                  &-value {
+                    font-size: 1.2rem;
+                    color: $text-col;
+                    font-family: $Josef-Sans;
+                  }
+                  
+                }
+                .stats__prec {
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  &-icon {
+                    background-image: url('../imgs/wicons/umbrella.png');
+                    width: 40px;
+                    height: 40px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                  }
+                }
+                .stats__wind {
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  &-icon {
+                    background-image: url('../imgs/wicons/wind.png');
+                    width: 40px;
+                    height: 40px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                  }
+                }
+              }
             }
           }
         }

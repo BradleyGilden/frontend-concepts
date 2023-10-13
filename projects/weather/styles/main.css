@@ -90,4 +90,76 @@ body .cover .interface .current__title {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.3rem;
   color: rgb(25, 25, 155);
+}
+body .cover .interface .current__content {
+  display: flex;
+  padding-inline: 20px;
+  justify-content: space-between;
+}
+body .cover .interface .current__content-widget {
+  display: flex;
+  gap: 10px;
+}
+body .cover .interface .current__content-widget .widget__icon {
+  width: 120px;
+  height: 120px;
+  flex-grow: 1;
+  background-image: url("../imgs/wicons/p_cloudy2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+body .cover .interface .current__content-widget .widget__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+body .cover .interface .current__content-widget .widget__text-temp {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3.5rem;
+  color: rgb(25, 25, 155);
+}
+body .cover .interface .current__content-widget .widget__text-feel, body .cover .interface .current__content-widget .widget__text-description {
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(25, 25, 155);
+  font-size: 1.2rem;
+}
+body .cover .interface .current__content-widget .widget__text-description {
+  padding-top: 20%;
+  color: rgb(226, 102, 0);
+}
+body .cover .interface .current__content-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+}
+body .cover .interface .current__content-stats .stats__prec-value, body .cover .interface .current__content-stats .stats__wind-value, body .cover .interface .current__content-stats .stats__date-value {
+  font-size: 1.2rem;
+  color: rgb(25, 25, 155);
+  font-family: "Josefin Sans", sans-serif;
+}
+body .cover .interface .current__content-stats .stats__prec {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+body .cover .interface .current__content-stats .stats__prec-icon {
+  background-image: url("../imgs/wicons/umbrella.png");
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+body .cover .interface .current__content-stats .stats__wind {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+body .cover .interface .current__content-stats .stats__wind-icon {
+  background-image: url("../imgs/wicons/wind.png");
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=main.css.map */
