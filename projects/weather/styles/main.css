@@ -76,7 +76,7 @@ body .cover .interface {
   justify-content: space-around;
 }
 body .cover .interface .current {
-  width: 60%;
+  width: 70%;
   height: 200px;
   background-color: rgba(255, 255, 255, 0.444);
   border-radius: 30px;
@@ -86,10 +86,11 @@ body .cover .interface .current {
   box-shadow: 0px 5px 10px grey;
 }
 body .cover .interface .current__title {
-  text-align: center;
+  text-align: left;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.3rem;
   color: rgb(25, 25, 155);
+  padding-bottom: 15px;
 }
 body .cover .interface .current__content {
   display: flex;
@@ -126,13 +127,15 @@ body .cover .interface .current__content-widget .widget__text-feel, body .cover 
 }
 body .cover .interface .current__content-widget .widget__text-description {
   padding-top: 20%;
-  color: rgb(226, 102, 0);
+  color: rgb(176, 3, 203);
 }
 body .cover .interface .current__content-stats {
+  align-self: end;
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: start;
+  gap: 15px;
+  padding-bottom: 10px;
 }
 body .cover .interface .current__content-stats .stats__prec-value, body .cover .interface .current__content-stats .stats__wind-value, body .cover .interface .current__content-stats .stats__date-value {
   font-size: 1.2rem;
@@ -141,7 +144,11 @@ body .cover .interface .current__content-stats .stats__prec-value, body .cover .
 }
 body .cover .interface .current__content-stats .stats__prec {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  border-right: 2px solid rgba(0, 0, 255, 0.218);
+  padding-right: 5px;
   gap: 10px;
 }
 body .cover .interface .current__content-stats .stats__prec-icon {
@@ -153,11 +160,27 @@ body .cover .interface .current__content-stats .stats__prec-icon {
 }
 body .cover .interface .current__content-stats .stats__wind {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  border-right: 2px solid rgba(0, 0, 255, 0.218);
+  padding-right: 5px;
   gap: 10px;
 }
 body .cover .interface .current__content-stats .stats__wind-icon {
   background-image: url("../imgs/wicons/wind.png");
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+body .cover .interface .current__content-stats .stats__date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+body .cover .interface .current__content-stats .stats__date-icon {
+  background-image: url("../imgs/wicons/clock.png");
   width: 40px;
   height: 40px;
   background-size: contain;
