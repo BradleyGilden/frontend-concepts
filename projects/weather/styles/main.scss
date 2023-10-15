@@ -7,6 +7,7 @@
   --Josef-Sans: 'Josefin Sans', sans-serif;
   --cards: rgba(255, 255, 255, 0.444);
   --text-col: rgb(25, 25, 155);
+  --divider: rgba(0, 0, 255, 0.218);
 
   --mobile: 480px;
   --tablet: 768px;
@@ -15,8 +16,9 @@
   --tv: 1201px;
 }
 
-// styles for current weather card
+// imports
 @import 'current';
+@import 'today';
 
 
 // page setup

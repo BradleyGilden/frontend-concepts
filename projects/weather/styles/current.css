@@ -28,7 +28,6 @@ body .cover .interface .current__content-widget .widget__icon {
   width: 120px;
   height: 120px;
   flex-grow: 1;
-  background-image: url("../imgs/wicons/p_cloudy2.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -70,7 +69,7 @@ body .cover .interface .current__content-stats .stats__prec {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-right: 2px solid rgba(0, 0, 255, 0.218);
+  border-right: 2px solid var(--divider);
   padding-right: 5px;
   gap: 10px;
 }
@@ -85,7 +84,7 @@ body .cover .interface .current__content-stats .stats__wind {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-right: 2px solid rgba(0, 0, 255, 0.218);
+  border-right: 2px solid var(--divider);
   padding-right: 5px;
   gap: 10px;
 }
