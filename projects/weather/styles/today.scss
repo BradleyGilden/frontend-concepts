@@ -42,7 +42,7 @@ body {
                 &-min {
                   padding-left: 10px;
                   font-size: 2rem;
-                  align-self: end;
+                  align-self: flex-end;
                 }
               }
               .widget__description {
@@ -54,13 +54,73 @@ body {
             }
           }
           &-stats {
-            align-self: end;
             display: flex;
             justify-content: space-around;
-            align-items: start;
-            gap: 15px;
+            gap: 10px;
             padding-bottom: 10px;
             width: 490.5px;
+            height: 100%;
+            .stats__prec {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-between;
+              padding-right: 10px;
+              border-right: 2px solid var(--divider);
+              &-icon {
+                background-image: url('../imgs/wicons/umbrella.png');
+                width: 40px;
+                height: 40px;
+                background-size: contain;
+                background-repeat: no-repeat;
+              }
+              &-value, &-hours {
+                font-size: var(--sfont-size);
+                color: var(--text-col);
+                font-family: var(--Josef-Sans);
+                align-self: flex-start;
+              }
+            }
+            .stats__wind {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-between;
+              padding-right: 10px;
+              border-right: 2px solid var(--divider);
+              &-icon {
+                background-image: url('../imgs/wicons/wind.png');
+                width: 40px;
+                height: 40px;
+                background-size: contain;
+                background-repeat: no-repeat;
+              }
+              &-value, &-direct {
+                font-size: var(--sfont-size);
+                color: var(--text-col);
+                font-family: var(--Josef-Sans);
+                align-self: flex-start;
+              }
+            }
+            .stats__date {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-between;
+              &-icon {
+                background-image: url('../imgs/wicons/sunrise.png');
+                width: 40px;
+                height: 40px;
+                background-size: contain;
+                background-repeat: no-repeat;
+              }
+              &-sunrise, &-sunset {
+                font-size: var(--sfont-size);
+                color: var(--text-col);
+                font-family: var(--Josef-Sans);
+                align-self: flex-start;
+              }
+            }
           }
         }
       }

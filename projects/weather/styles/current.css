@@ -52,10 +52,10 @@ body .cover .interface .current__content-widget .widget__text-description {
   color: var(--desc-col);
 }
 body .cover .interface .current__content-stats {
-  align-self: end;
+  align-self: flex-end;
   display: flex;
   justify-content: space-around;
-  align-items: start;
+  align-items: flex-start;
   gap: 15px;
   padding-bottom: 10px;
 }

@@ -69,10 +69,10 @@ body .cover .interface .current__content-widget .widget__text-description {
   color: var(--desc-col);
 }
 body .cover .interface .current__content-stats {
-  align-self: end;
+  align-self: flex-end;
   display: flex;
   justify-content: space-around;
-  align-items: start;
+  align-items: flex-start;
   gap: 15px;
   padding-bottom: 10px;
 }
@@ -180,7 +180,7 @@ body .cover .interface .today__content-widget .widget__text-col .widget__temp-ma
 body .cover .interface .today__content-widget .widget__text-col .widget__temp-min {
   padding-left: 10px;
   font-size: 2rem;
-  align-self: end;
+  align-self: flex-end;
 }
 body .cover .interface .today__content-widget .widget__text-col .widget__description {
   color: var(--desc-col);
@@ -189,13 +189,73 @@ body .cover .interface .today__content-widget .widget__text-col .widget__descrip
   font-family: var(--Josef-Sans);
 }
 body .cover .interface .today__content-stats {
-  align-self: end;
   display: flex;
   justify-content: space-around;
-  align-items: start;
-  gap: 15px;
+  gap: 10px;
   padding-bottom: 10px;
   width: 490.5px;
+  height: 100%;
+}
+body .cover .interface .today__content-stats .stats__prec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
+  border-right: 2px solid var(--divider);
+}
+body .cover .interface .today__content-stats .stats__prec-icon {
+  background-image: url("../imgs/wicons/umbrella.png");
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+body .cover .interface .today__content-stats .stats__prec-value, body .cover .interface .today__content-stats .stats__prec-hours {
+  font-size: var(--sfont-size);
+  color: var(--text-col);
+  font-family: var(--Josef-Sans);
+  align-self: flex-start;
+}
+body .cover .interface .today__content-stats .stats__wind {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
+  border-right: 2px solid var(--divider);
+}
+body .cover .interface .today__content-stats .stats__wind-icon {
+  background-image: url("../imgs/wicons/wind.png");
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+body .cover .interface .today__content-stats .stats__wind-value, body .cover .interface .today__content-stats .stats__wind-direct {
+  font-size: var(--sfont-size);
+  color: var(--text-col);
+  font-family: var(--Josef-Sans);
+  align-self: flex-start;
+}
+body .cover .interface .today__content-stats .stats__date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+body .cover .interface .today__content-stats .stats__date-icon {
+  background-image: url("../imgs/wicons/sunrise.png");
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+body .cover .interface .today__content-stats .stats__date-sunrise, body .cover .interface .today__content-stats .stats__date-sunset {
+  font-size: var(--sfont-size);
+  color: var(--text-col);
+  font-family: var(--Josef-Sans);
+  align-self: flex-start;
 }
 
 * {
