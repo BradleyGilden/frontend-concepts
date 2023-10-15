@@ -1,0 +1,112 @@
+@import 'mixins';
+
+body {
+  .cover {
+    .interface {
+      .current {
+        @include card-template(var(--cards), var(--card-shadow));
+        height: 200px;
+        &__title {
+          @include title-template(var(--Josef-Sans), var(--text-col));
+        }
+        &__content {
+          display: flex;
+          padding-inline: 20px;
+          justify-content: space-between;
+          &-widget{
+            display: flex;
+            gap: 10px;
+            .widget__icon{
+              width: 120px;
+              height: 120px;
+              flex-grow: 1;
+              background-image: url('../imgs/wicons/p_cloudy2.png');
+              background-size: contain;
+              background-repeat: no-repeat;
+            }
+            .widget__text {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              align-items: center;
+              &-temp{
+                font-family: var(--Josef-Sans);
+                font-size: 3.5rem;
+                color: var(--text-col);
+              }
+              &-feel, &-description {
+                font-family: var(--Josef-Sans);
+                color: var(--text-col);
+                font-size: var(--sfont-size);
+              }
+              &-description {
+                padding-top: 20%;
+                color: var(--desc-col);
+              }
+            }
+          }
+          &-stats{
+            align-self: end;
+            display: flex;
+            justify-content: space-around;
+            align-items: start;
+            gap: 15px;
+            padding-bottom: 10px;
+            .stats__prec, .stats__wind, .stats__date {
+              &-value {
+                font-size: var(--sfont-size);
+                color: var(--text-col);
+                font-family: var(--Josef-Sans);
+              }
+              
+            }
+            .stats__prec {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              border-right: 2px solid rgba(0, 0, 255, 0.218);
+              padding-right: 5px;
+              gap: 10px;
+              &-icon {
+                background-image: url('../imgs/wicons/umbrella.png');
+                width: 40px;
+                height: 40px;
+                background-size: contain;
+                background-repeat: no-repeat;
+              }
+            }
+            .stats__wind {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              border-right: 2px solid rgba(0, 0, 255, 0.218);
+              padding-right: 5px;
+              gap: 10px;
+              &-icon {
+                background-image: url('../imgs/wicons/wind.png');
+                width: 40px;
+                height: 40px;
+                background-size: contain;
+                background-repeat: no-repeat;
+              }
+            }
+            .stats__date {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 10px;
+              &-icon {
+                background-image: url('../imgs/wicons/clock.png');
+                width: 40px;
+                height: 40px;
+                background-size: contain;
+                background-repeat: no-repeat;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

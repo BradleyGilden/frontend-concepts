@@ -17,6 +17,7 @@ window.addEventListener('load', () => {
       link.classList.remove('visited');
     }
   }
+  // default option if no page is visited
   if (def) {
     links[0].classList.add('visited');
   }

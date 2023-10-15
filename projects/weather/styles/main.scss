@@ -1,210 +1,100 @@
-$blur-col: rgba(0, 0, 0, 0.395);
-$strip-col: rgba(255, 255, 255, 0.236);
-$head-col: rgba(255, 255, 255, 0.13);
-$nav-t-shadow: 0px 0px 5px black;
-$Josef-Sans: 'Josefin Sans', sans-serif;
-$cards: rgba(255, 255, 255, 0.444);
-$text-col: rgb(25, 25, 155);
+:root {
+  --desc-col: rgb(176, 3, 203);
+  --card-shadow: 0px 5px 10px grey;
+  --sfont-size: 1.2rem;
+  --blur-col: rgba(0, 0, 0, 0.395);
+  --head-col: rgba(255, 255, 255, 0.13);
+  --Josef-Sans: 'Josefin Sans', sans-serif;
+  --cards: rgba(255, 255, 255, 0.444);
+  --text-col: rgb(25, 25, 155);
+
+  --mobile: 480px;
+  --tablet: 768px;
+  --laptop: 1024px;
+  --desktop: 1200px;
+  --tv: 1201px;
+}
+
+// styles for current weather card
+@import 'current';
+
+
+// page setup
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-image: url(../imgs/backdrop.jpg);
-    width: 100vw;
+  background-image: url(../imgs/backdrop.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .cover {
+    backdrop-filter: blur(10px);
     height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    .cover {
-        backdrop-filter: blur(10px);
-        height: 100vh;
-        width: 100vw;
-        background: $blur-col;
-
-        header {
-          height: 10%;
-          background-color: $head-col;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding-inline: 20px;
-
-          .logo {
-            display:flex;
-            justify-content: center;
-            align-items: center;
-
-            .icon {
-              width:60px;
-              background-image: url('../imgs/cloud.png');
-              background-size: contain;
-              background-repeat: no-repeat;
-              height: 60px;
-            }
-            a {
-              text-decoration: none;
-            }
-            .title {
-              font-size: 2rem;
-              color: white;
-              font-family: $Josef-Sans;
-            }
+    width: 100vw;
+    background: var(--blur-col);
+    header {
+      height: 10%;
+      background-color: var(--head-col);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-inline: 20px;
+      .logo {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        .icon {
+          width:60px;
+          background-image: url('../imgs/cloud.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+          height: 60px;
+        }
+        a {
+          text-decoration: none;
+        }
+        .title {
+          font-size: 2rem;
+          color: white;
+          font-family: var(--Josef-Sans);
+        }
+      }
+      .nav {
+        display: flex;
+        gap: 20px;
+        .selector {
+          font-family: var(--Josef-Sans);
+          padding: 14px 5px;
+          border-radius: 5px;
+          text-decoration: none;
+          color: white;
+          transition: all 0.3s;
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.222);
           }
-          .nav {
-            display: flex;
-            gap: 20px;
-            .selector {
-              font-family: $Josef-Sans;
-              padding: 14px 5px;
-              border-radius: 5px;
-              text-decoration: none;
-              color: white;
-              transition: all 0.3s;
-
-              &:hover {
-                background-color: rgba(0, 0, 0, 0.222);
-              }
-              &.visited {
-                text-decoration: underline;
-                text-decoration-color: blue;
-                text-decoration-thickness: 3px;
-                text-underline-offset: 5px;
-              }
-            }
+          &.visited {
+            text-decoration: underline;
+            text-decoration-color: blue;
+            text-decoration-thickness: 3px;
+            text-underline-offset: 5px;
           }
         }
-
-        .interface {
-          height: 80%;
-          width: 100vw;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: space-around;
-
-          .current {
-            width: 70%;
-            height: 200px;
-            background-color: $cards;
-            border-radius: 30px;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            box-shadow: 0px 5px 10px grey;
-            &__title {
-              text-align: left;
-              font-family: $Josef-Sans;
-              font-size: 1.3rem;
-              color: $text-col;
-              padding-bottom: 15px;
-            }
-            &__content {
-              display: flex;
-              padding-inline: 20px;
-              justify-content: space-between;
-
-              &-widget{
-                display: flex;
-                gap: 10px;
-
-                .widget__icon{
-                  width: 120px;
-                  height: 120px;
-                  flex-grow: 1;
-                  background-image: url('../imgs/wicons/p_cloudy2.png');
-                  background-size: contain;
-                  background-repeat: no-repeat;
-                }
-                .widget__text {
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: space-around;
-                  align-items: center;
-                  &-temp{
-                    font-family: $Josef-Sans;
-                    font-size: 3.5rem;
-                    color: $text-col;
-                  }
-                  &-feel, &-description {
-                    font-family: $Josef-Sans;
-                    color: $text-col;
-                    font-size: 1.2rem;
-                  }
-                  &-description {
-                    padding-top: 20%;
-                    color: rgb(176, 3, 203);
-                  }
-                }
-
-              }
-
-              &-stats{
-                align-self: end;
-                display: flex;
-                justify-content: space-around;
-                align-items: start;
-                gap: 15px;
-                padding-bottom: 10px;
-
-                .stats__prec, .stats__wind, .stats__date {
-                  &-value {
-                    font-size: 1.2rem;
-                    color: $text-col;
-                    font-family: $Josef-Sans;
-                  }
-                  
-                }
-                .stats__prec {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  justify-content: center;
-                  border-right: 2px solid rgba(0, 0, 255, 0.218);
-                  padding-right: 5px;
-                  gap: 10px;
-                  &-icon {
-                    background-image: url('../imgs/wicons/umbrella.png');
-                    width: 40px;
-                    height: 40px;
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                  }
-                }
-                .stats__wind {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  border-right: 2px solid rgba(0, 0, 255, 0.218);
-                  padding-right: 5px;
-                  gap: 10px;
-                  &-icon {
-                    background-image: url('../imgs/wicons/wind.png');
-                    width: 40px;
-                    height: 40px;
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                  }
-                }
-                .stats__date {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  gap: 10px;
-                  &-icon {
-                    background-image: url('../imgs/wicons/clock.png');
-                    width: 40px;
-                    height: 40px;
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                  }
-                }
-              }
-            }
-          }
-        }
+      }
     }
+    .interface {
+      height: 80%;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
 }
