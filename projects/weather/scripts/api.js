@@ -10,11 +10,20 @@ import getIconPath from './icon_path.js';
 
 /******* Returns JSON data as an object {data} ********/
 const getJson = async () => {
-  const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=-29.8579&longitude=31.0292&current=temperature_2m,relativehumidity_2m,apparent_temperature,is_day,precipitation,weathercode,windspeed_10m&hourly=temperature_2m,relativehumidity_2m,apparent_temperature,precipitation_probability,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=auto');
+  const response = await fetch(
+  'https://api.open-meteo.com/v1/forecast?'+
+  'latitude=-29.8579&longitude=31.0292'+
+  '&current=temperature_2m,relativehumidity_2m,apparent_temperature,is_day,precipitation,weathercode,windspeed_10m'+
+  '&hourly=temperature_2m,relativehumidity_2m,apparent_temperature,precipitation_probability,weathercode,windspeed_10m'+
+  '&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_probability_mean,windspeed_10m_max,winddirection_10m_dominant,sunrise,sunset'+
+  '&timezone=auto'
+  );
   const data = await response.json();
   if (data.error) {
     console.log(data.reason);
   }
+  console.log('current', data.current);
+  console.log('daily', data.daily);
   return data;
 };
 
@@ -35,13 +44,12 @@ const currentData = async () => {
   let ctime;
 
   const jsonData = await getJson();
-  console.log(jsonData.current);
   current = jsonData.current;
   // get time of data recording from json data
   ctime = new Date(current.time);
   icon.style.backgroundImage = `url('${getIconPath(current.weathercode, current.is_day)}')`
   temp.textContent = Math.round(current.temperature_2m).toString() + '°C';
-  feel.textContent = 'feels like ' + Math.round(current.apparent_temperature).toString() + '°C';
+  feel.textContent = 'RealFeel ' + Math.round(current.apparent_temperature).toString() + '°C';
   prec.textContent = 'precipitation: ' + Math.round(current.precipitation).toString() + 'mm';
   updated.textContent = `updated at: ${ctime.getHours().toString().padStart(2, '0')}:${ctime.getMinutes().toString().padStart(2, '0')}`;
   comment.textContent = WMO[current.weathercode];
