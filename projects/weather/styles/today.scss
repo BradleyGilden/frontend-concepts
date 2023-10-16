@@ -2,7 +2,7 @@ body {
   .cover {
     .interface{
       .today {
-        @include card-template(var(--cards), var(--card-shadow));
+        @include card-template(var(--cards));
         height: 200px;
         &__title {
           @include title-template(var(--Josef-Sans), var(--text-col));

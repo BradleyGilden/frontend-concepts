@@ -22,3 +22,7 @@ window.addEventListener('load', () => {
     links[0].classList.add('visited');
   }
 })
+
+// const themeToggle = () => {
+
+// }

@@ -5,21 +5,21 @@
   --blur-col: rgba(0, 0, 0, 0.395);
   --head-col: rgba(255, 255, 255, 0.13);
   --Josef-Sans: 'Josefin Sans', sans-serif;
-  --cards: rgba(255, 255, 255, 0.444);
+  --cards: rgba(255, 255, 255, 0.656);
   --text-col: rgb(25, 25, 155);
   --divider: rgba(0, 0, 255, 0.218);
 
   --mobile: 480px;
   --tablet: 768px;
   --laptop: 1024px;
-  --desktop: 1200px;
-  --tv: 1201px;
+  --desktop: 1283px;
+  --tv: 1284px;
 }
 
 // imports
 @import 'current';
 @import 'today';
-
+@import 'media_queries';
 
 // page setup
 
@@ -41,6 +41,8 @@ body {
     height: 100vh;
     width: 100vw;
     background: var(--blur-col);
+    display: flex;
+    flex-direction: column;
     header {
       height: 10%;
       background-color: var(--head-col);
@@ -91,12 +93,14 @@ body {
       }
     }
     .interface {
-      height: 80%;
+      padding: 30px 0px;
+      overflow-y: auto;
+      height: 90%;
       width: 100vw;
       display: flex;
-      flex-direction: column;
+      gap: 40px;
       align-items: center;
-      justify-content: space-around;
+      flex-direction: column;
     }
   }
 }
