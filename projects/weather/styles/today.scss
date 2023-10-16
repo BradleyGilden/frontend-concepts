@@ -14,7 +14,7 @@ body {
           &-widget {
             display: flex;
             gap: 10px;
-            .widget__icon {
+            .widget__icon2 {
               background-image: url('../imgs/wicons/p_cloudy2.png');
               width: 120px;
               height: 120px;
@@ -45,7 +45,7 @@ body {
                   align-self: flex-end;
                 }
               }
-              .widget__description {
+              .widget__description2 {
                 color: var(--desc-col);
                 font-size: var(--sfont-size);
                 text-align: center;
@@ -74,7 +74,7 @@ body {
                 background-size: contain;
                 background-repeat: no-repeat;
               }
-              &-value, &-hours {
+              &-value2, &-hours {
                 font-size: var(--sfont-size);
                 color: var(--text-col);
                 font-family: var(--Josef-Sans);
@@ -95,7 +95,7 @@ body {
                 background-size: contain;
                 background-repeat: no-repeat;
               }
-              &-value, &-direct {
+              &-value2, &-direct {
                 font-size: var(--sfont-size);
                 color: var(--text-col);
                 font-family: var(--Josef-Sans);
