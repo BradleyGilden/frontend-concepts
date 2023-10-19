@@ -13,9 +13,15 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+@app.route("/", strict_slashes=False)
+@app.route("/home", strict_slashes=False)
+def home():
+    return "<h1 align=center>Home Page</h1>"
+
+
+@app.route("/about", strict_slashes=False)
+def about():
+    return "<h1 align=center>About Page</h1>"
 
 
 if __name__ == '__main__':
