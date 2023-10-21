@@ -1,10 +1,12 @@
-# React Fundamentals
+# React Fundamentals -> [John Smilga's React Course](https://m.youtube.com/watch?si=3WFLit3_W28V8hhV&v=2-crBg6wpp0&feature=youtu.be)
 
-#### React Course
+This Directory contains content from John Smilga's React course. 
 
-[My React Course](https://www.udemy.com/course/react-tutorial-and-projects-course/?referralCode=FEE6A921AF07E2563CEF)
+#### John Smilga's Udemy Course
 
-#### Support
+[React Udemy](https://www.udemy.com/course/react-tutorial-and-projects-course/?referralCode=FEE6A921AF07E2563CEF)
+
+#### Support John Smilga
 
 Find the Content Useful? [You can always buy me a coffee](https://www.buymeacoffee.com/johnsmilga)
 
