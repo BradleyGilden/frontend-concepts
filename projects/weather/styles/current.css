@@ -6,6 +6,7 @@ body .cover .interface .current {
   flex-direction: column;
   padding: 20px;
   height: 200px;
+  margin: 60px auto;
 }
 body .cover .interface .current__title {
   text-align: left;

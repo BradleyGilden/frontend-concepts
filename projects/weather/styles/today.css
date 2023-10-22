@@ -1,1 +1,131 @@
-/*# sourceMappingURL=today.css.map */
+body .cover .interface .today {
+  width: 70%;
+  background-color: var(--cards);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 200px;
+  margin: 0px auto;
+}
+body .cover .interface .today__title {
+  text-align: left;
+  font-family: var(--Josef-Sans);
+  font-size: 1.3rem;
+  color: var(--text-col);
+  padding-bottom: 15px;
+}
+body .cover .interface .today__content {
+  display: flex;
+  padding-inline: 20px;
+  justify-content: space-between;
+}
+body .cover .interface .today__content-widget {
+  display: flex;
+  gap: 10px;
+}
+body .cover .interface .today__content-widget .widget__icon2 {
+  background-image: url("../imgs/wicons/p_cloudy2.png");
+  width: 120px;
+  height: 120px;
+  flex-grow: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+body .cover .interface .today__content-widget .widget__text-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .cover .interface .today__content-widget .widget__text-col .widget__temp {
+  display: flex;
+}
+body .cover .interface .today__content-widget .widget__text-col .widget__temp-max, body .cover .interface .today__content-widget .widget__text-col .widget__temp-min {
+  color: var(--text-col);
+  font-family: var(--Josef-Sans);
+}
+body .cover .interface .today__content-widget .widget__text-col .widget__temp-max {
+  font-size: 3.5rem;
+  padding-right: 10px;
+  border-right: 2px solid var(--divider);
+}
+body .cover .interface .today__content-widget .widget__text-col .widget__temp-min {
+  padding-left: 10px;
+  font-size: 2rem;
+  align-self: flex-end;
+}
+body .cover .interface .today__content-widget .widget__text-col .widget__description2 {
+  color: var(--desc-col);
+  font-size: var(--sfont-size);
+  text-align: center;
+  font-family: var(--Josef-Sans);
+}
+body .cover .interface .today__content-stats {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  padding-bottom: 10px;
+  width: 490.5px;
+  height: 100%;
+}
+body .cover .interface .today__content-stats .stats__prec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
+  border-right: 2px solid var(--divider);
+}
+body .cover .interface .today__content-stats .stats__prec-icon {
+  background-image: url("../imgs/wicons/umbrella.png");
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+body .cover .interface .today__content-stats .stats__prec-value2, body .cover .interface .today__content-stats .stats__prec-hours {
+  font-size: var(--sfont-size);
+  color: var(--text-col);
+  font-family: var(--Josef-Sans);
+  align-self: flex-start;
+}
+body .cover .interface .today__content-stats .stats__wind {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
+  border-right: 2px solid var(--divider);
+}
+body .cover .interface .today__content-stats .stats__wind-icon {
+  background-image: url("../imgs/wicons/wind.png");
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+body .cover .interface .today__content-stats .stats__wind-value2, body .cover .interface .today__content-stats .stats__wind-direct {
+  font-size: var(--sfont-size);
+  color: var(--text-col);
+  font-family: var(--Josef-Sans);
+  align-self: flex-start;
+}
+body .cover .interface .today__content-stats .stats__date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+body .cover .interface .today__content-stats .stats__date-icon {
+  background-image: url("../imgs/wicons/sunrise.png");
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+body .cover .interface .today__content-stats .stats__date-sunrise, body .cover .interface .today__content-stats .stats__date-sunset {
+  font-size: var(--sfont-size);
+  color: var(--text-col);
+  font-family: var(--Josef-Sans);
+  align-self: flex-start;
+}/*# sourceMappingURL=today.css.map */

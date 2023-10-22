@@ -6,6 +6,7 @@
  * Date: 07-10-2023
  */
 
+// executes every time the page is loaded
 window.addEventListener('load', () => {
   let def = true;
   let links = document.querySelectorAll('.selector');
@@ -23,6 +24,17 @@ window.addEventListener('load', () => {
   }
 })
 
+// shows the navigation drop-down menu
+function navClick () {
+  let nav = document.querySelector('.nav');
+  let navbutton = document.querySelector('.navbutton');
+
+  navbutton.addEventListener('click', () => {
+    nav.classList.toggle('clicked');
+  })
+}
+
+navClick();
 // const themeToggle = () => {
 
 // }

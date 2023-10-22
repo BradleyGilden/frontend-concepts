@@ -1,9 +1,12 @@
+@import 'mixins';
+
 body {
   .cover {
     .interface{
       .today {
         @include card-template(var(--cards));
         height: 200px;
+        margin: 0px auto;
         &__title {
           @include title-template(var(--Josef-Sans), var(--text-col));
         }

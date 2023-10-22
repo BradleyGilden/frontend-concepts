@@ -6,6 +6,7 @@ body {
       .current {
         @include card-template(var(--cards));
         height: 200px;
+        margin: 60px auto;
         &__title {
           @include title-template(var(--Josef-Sans), var(--text-col));
         }

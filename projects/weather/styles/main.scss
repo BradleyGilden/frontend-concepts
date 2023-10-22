@@ -19,8 +19,6 @@
 // imports
 @import 'current';
 @import 'today';
-@import 'media_queries';
-
 // page setup
 
 * {
@@ -70,6 +68,9 @@ body {
           font-family: var(--Josef-Sans);
         }
       }
+      .navbutton {
+        display: none;
+      }
       .nav {
         display: flex;
         gap: 20px;
@@ -97,10 +98,11 @@ body {
       overflow-y: auto;
       height: 90%;
       width: 100vw;
-      display: flex;
+      display: block;
       gap: 40px;
       align-items: center;
-      flex-direction: column;
     }
   }
 }
+
+@import 'media_queries';
