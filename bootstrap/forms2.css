@@ -1,0 +1,7 @@
+.input-group-text {
+    color: white;
+}
+
+#text[type="text"]:focus {
+    box-shadow: none;
+}
