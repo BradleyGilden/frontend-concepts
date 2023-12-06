@@ -1,5 +1,5 @@
 // To avoid duplication of objects, we can create a function that returns objects with given parameters using
-// a "Factory or constructor function"
+// a "Factory function"
 
 function createCircle(radius, x=0, y=0, strokeColor='black', fill=false, fillColor='white') {
 	return {
@@ -22,3 +22,7 @@ function createCircle(radius, x=0, y=0, strokeColor='black', fill=false, fillCol
 		}
 	};
 }
+
+// To draw the circle:
+// let circ = createCircle(50, 250, 250, 'blue', true, 'red');
+// circ.draw();
