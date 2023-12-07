@@ -20,5 +20,8 @@ function Circle(radius, x=0, y=0, strokeColor='black', fill=false, fillColor='wh
 }
 
 // To draw the circle:
-// let circ = new Circle(50, 250, 250, 'blue', true, 'red');
-// circ.draw
+let circ2 = new Circle(50, 100, 100, 'blue', true, 'blue');
+circ2.draw();
+
+// the constructor property of an object refrences the function used to create the object
+console.log('blue circle (constructor func)\n', circ2.constructor);

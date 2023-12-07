@@ -23,6 +23,10 @@ function createCircle(radius, x=0, y=0, strokeColor='black', fill=false, fillCol
 	};
 }
 
+
 // To draw the circle:
-// let circ = createCircle(50, 250, 250, 'blue', true, 'red');
-// circ.draw();
+let circ1 = createCircle(50, 250, 250, 'blue', true, 'red');
+circ1.draw();
+
+// the constructor property of an object refrences the function used to create the object
+console.log('red circle (factory func)\n', circ1.constructor);
