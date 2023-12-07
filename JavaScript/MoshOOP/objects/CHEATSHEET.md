@@ -1,8 +1,4 @@
-# Object Orientated Programming In Javascript
-
-This directory contains some examples with sleight modifications of Mosh's Udemy course for javascript OOP for my own self-learning
-
-## Object cheat sheet
+# Object cheat sheet
 
 ```JavaScript
 // The simplest way to create an object is using an object literal 
