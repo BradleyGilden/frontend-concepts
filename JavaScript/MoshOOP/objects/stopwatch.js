@@ -23,7 +23,7 @@ function StopWatch() {
 
 	this.start = function () {
 		if (started) {
-			throw Error("stop watch has already started");
+			throw new Error("stop watch has already started");
 		}
 		startTime = new Date();
 		started = true;
@@ -31,7 +31,7 @@ function StopWatch() {
 
 	this.stop = function () {
 		if (!started) {
-			throw Error("stop watch has already stopped");
+			throw new Error("stop watch has already stopped");
 		}
 		endTime = new Date();
 		duration += (endTime - startTime)/ 1000;

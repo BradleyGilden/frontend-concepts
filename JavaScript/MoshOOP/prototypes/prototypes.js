@@ -61,3 +61,5 @@ function Circle2(radius=1) {
 Circle2.prototype.area = function() {
 	return 2 * Math.PI * Math.pow(this.radius, 2);
 };
+
+// if you were to iterate the object keys of the object of Circle2, you would still see the prototype members
