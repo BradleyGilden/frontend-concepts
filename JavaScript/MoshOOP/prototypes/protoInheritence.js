@@ -1,12 +1,15 @@
 
-function Shape(){
+function Shape(color="black"){
+	this.color = color;
 };
 
 Shape.prototype.default = function(){
 	return 'I am a shape';
 };
 
-function Circle(radius=1){
+function Circle(radius=1, color){
+	// to initialize shape property:
+	Shape.call(this, color); // calls shape method with 'this' context to circle object being created
 	this.radius = radius;
 }
 
