@@ -7,50 +7,56 @@ import bookCover3 from './images/bookcover3.jpg';
 import bookCover4 from './images/bookcover4.jpg';
 import './index.css';
 
-const book1 = {
-  title: 'Curious Minds',
-  author: 'Jordan Moor',
-  img: bookCover1
-}
+const books = [
+  {
+    title: 'Curious Minds',
+    author: 'Jordan Moor',
+    img: bookCover1,
+    id: 1
+  },
+  {
+    title: 'Holly',
+    author: 'Stephen King',
+    img: bookCover2,
+    id: 2
+  },
+  {
+    title: 'Dad Jokes',
+    author: 'Jimmy Niro',
+    img: bookCover3,
+    id: 3
+  },
+  {
+    title: 'Fourth Wing',
+    author: 'Rebecca Yarros',
+    img: bookCover4,
+    id: 4
+  }
+]
 
-const book2 = {
-  title: 'Holly',
-  author: 'Stephen King',
-  img: bookCover2
-}
-
-const book3 = {
-  title: 'Dad Jokes',
-  author: 'Jimmy Niro',
-  img: bookCover3
-}
-
-const book4 = {
-  title: 'Fourth Wing',
-  author: 'Rebecca Yarros',
-  img: bookCover4
-}
-
-// props
-const Book = (props) => {
+// (props)
+const Book = ({ img, title, author }) => {
   return (
-    <article className="sm:w-80 w-11/12 bg-white rounded-[30px]">
-      <img className="pt-4 w-10/12 mx-auto" src={props.img} alt="cover" />
-      <h2 className="text-center px-2 sm:text-lg sm:px-4" >{props.title}</h2>
+    <article className="sm:w-80 w-11/12 bg-white rounded-[30px] px-3">
+      <img className="pt-4 w-10/12 mx-auto" src={img} alt="cover" />
+      <h2 className="text-center px-2 sm:text-lg sm:px-4" >{title}</h2>
+      <button className="bg-slate-300 px-3 py-1 block mx-auto my-1 hover:bg-slate-800 hover:text-white text-sm" onClick={() => {console.log(title)}}>Display Title</button>
       {/* we can add some javascript functionality in braces, only expressions are evaluated */}
-      <h4 className="text-center text-sm tracking-wider">{props.author.toUpperCase()}</h4>
+      <h4 className="text-center text-sm tracking-wider">{author.toUpperCase()}</h4>
     </article>
   );
 };
 
 function BookList() {
+  // we map book data to the component so it's information gets processed as a prop
   return (
     <div className="w-full">
       <section className="flex flex-wrap gap-y-6 sm:gap-4 justify-center py-12 px-0 sm:w-10/12 mx-auto">
-        <Book img={book1.img} title={book1.title} author={book1.author} />
-        <Book img={book2.img} title={book2.title} author={book2.author} />
-        <Book img={book3.img} title={book3.title} author={book3.author} />
-        <Book img={book4.img} title={book4.title} author={book4.author} />
+        {/* this is possible because React expands a lists contents onto the DOM */}
+        {books.map((book) => {
+          return <Book {...book} key={book.id}/>
+        })
+      }
       </section>
     </div>
   );

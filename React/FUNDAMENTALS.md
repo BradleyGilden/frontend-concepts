@@ -1141,6 +1141,35 @@ const EventExamples = () => {
     </section>
   );
 };
+
+// with tailwind
+const EventExamples = () => {
+  const handleFormInput = (e) => {
+    console.log(e.target.value);
+  };
+  const handleButtonClick = () => {
+    alert('handle button click');
+  };
+  const handleFormSubmission = (e) => {
+    e.preventDefault();
+    console.log('Form Submitted');
+  };
+  return (
+  <section>
+    <form onSubmit={handleFormSubmission}>
+      <h2 className="text-center">Typical Form</h2>
+      <input
+      type="text"
+      name="example"
+      onChange={handleFormInput}
+      className="m-1"
+      />
+      <button  type="submit" className="bg-slate-300 hover:bg-slate-800 px-2 hover:text-white" onClick={handleFormSubmission}>submit</button>
+    </form>
+    <button className="bg-slate-300 px-3 py-1 block mx-auto mt-3 hover:bg-slate-800 hover:text-white" onClick={handleButtonClick}>click me</button>
+  </section>
+  );
+}
 ```
 
 #### Event Object and Form Submission
