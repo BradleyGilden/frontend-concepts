@@ -35,12 +35,12 @@ const books = [
 ]
 
 // (props)
-const Book = ({ img, title, author }) => {
+const Book = ({ img, title, author, id, getBook }) => {
   return (
     <article className="sm:w-80 w-11/12 bg-white rounded-[30px] px-3">
       <img className="pt-4 w-10/12 mx-auto" src={img} alt="cover" />
       <h2 className="text-center px-2 sm:text-lg sm:px-4" >{title}</h2>
-      <button className="bg-slate-300 px-3 py-1 block mx-auto my-1 hover:bg-slate-800 hover:text-white text-sm" onClick={() => {console.log(title)}}>Display Title</button>
+      <button className="bg-slate-300 px-3 py-1 block mx-auto my-1 hover:bg-slate-800 hover:text-white text-sm" onClick={() => getBook(id)}>Display Title</button>
       {/* we can add some javascript functionality in braces, only expressions are evaluated */}
       <h4 className="text-center text-sm tracking-wider">{author.toUpperCase()}</h4>
     </article>
@@ -49,12 +49,17 @@ const Book = ({ img, title, author }) => {
 
 function BookList() {
   // we map book data to the component so it's information gets processed as a prop
+
+  // drilling function down the component chain
+  const getBook = (id) => {
+    console.log(books.find((book) => book.id === id));
+  }
   return (
     <div className="w-full">
       <section className="flex flex-wrap gap-y-6 sm:gap-4 justify-center py-12 px-0 sm:w-10/12 mx-auto">
         {/* this is possible because React expands a lists contents onto the DOM */}
         {books.map((book) => {
-          return <Book {...book} key={book.id}/>
+          return <Book {...book} key={book.id} getBook={getBook}/>
         })
       }
       </section>
