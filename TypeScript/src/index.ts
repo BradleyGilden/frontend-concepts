@@ -143,3 +143,12 @@ class Person implements PersonInterface {
 
 /****************************** Generics  ***********************************/
 // creates reusable components
+
+function getArray<T>(items: T[]): T[] {
+  return new Array().concat(items);
+}
+
+let numArray = getArray([1, 2, 3, 4])
+let strArray = getArray(['1', '2', '3', '4']);
+
+// numArray.push('hey') will give an error because numArray was created with a number array
