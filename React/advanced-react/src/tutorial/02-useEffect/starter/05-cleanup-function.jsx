@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const CleanupFunction = () => {
   const [toggle, setToggle] = useState(false);
