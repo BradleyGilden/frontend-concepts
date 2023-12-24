@@ -12,7 +12,7 @@ const CleanupFunction = () => {
 };
 
 const RandomComponent = () => {
-  return <h1.
+  return <h1>hello there</h1>
 }
 
 export default CleanupFunction;
