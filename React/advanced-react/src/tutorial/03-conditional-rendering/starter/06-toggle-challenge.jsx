@@ -1,5 +1,16 @@
+import {useState} from 'react';
+
 const ToggleChallenge = () => {
-  return <h2>toggle challenge</h2>;
+
+  const [morning, setMorning] = useState(true);
+
+  return (
+    {morning && <Greeting  />}
+  );
 };
+
+const Greeting = () => {
+
+}
 
 export default ToggleChallenge;
