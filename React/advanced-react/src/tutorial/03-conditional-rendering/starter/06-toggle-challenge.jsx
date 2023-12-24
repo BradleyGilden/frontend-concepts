@@ -17,9 +17,9 @@ const ToggleChallenge = () => {
   }
 
   return (
-    <>
+    <div>
       {name && <Greeting status={morning} name={name} message={message} />}
-    </>
+    </div>
   );
 };
 
