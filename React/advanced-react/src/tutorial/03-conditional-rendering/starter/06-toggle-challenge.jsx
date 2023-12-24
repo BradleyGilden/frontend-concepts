@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const ToggleChallenge = () => {
 
-  const [name, setName] = useState('john');
+  const [user, setName] = useState({ name: 'john' });
   const [morning, setMorning] = useState(true);
   const [message, setMessage] = useState('change to night');
 
@@ -18,7 +18,7 @@ const ToggleChallenge = () => {
 
   return (
     <div>
-      {name && <Greeting status={morning} name={name} message={message} />}
+      {user && <Greeting status={morning} name={user.name} message={message} />}
     </div>
   );
 };
