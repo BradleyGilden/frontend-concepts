@@ -15,7 +15,7 @@ const CleanupFunction = () => {
 const RandomComponent = () => {
   useEffect(() => {
     console.log('hmm, this is interesting');
-  })
+  }, []);
   return <h1>hello there</h1>
 }
 
