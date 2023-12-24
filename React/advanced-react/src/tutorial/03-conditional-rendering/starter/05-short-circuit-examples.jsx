@@ -10,14 +10,22 @@ const ShortCircuitExamples = () => {
 
   return (
     <div>
-      <h2>{name || 'default value'}</h2>
-      {text && <div>
-        <h2>whatever return</h2>
-        <h2>{name}</h2>
-      </div>
-      }
+      <h2>{text || 'default value'}</h2>
+      {user && <SomeComponent name={user.name} />}
     </div>
   );
 };
+
+const SomeComponent = ({name}) => {
+  return (
+    <div>
+      <h2>{name || 'default value'}</h2>
+      {name && <div>
+        <h2>whatever return</h2>
+        <h2>{name}</h2>
+      </div>}
+    </div>
+  );
+}
 
 export default ShortCircuitExamples;
