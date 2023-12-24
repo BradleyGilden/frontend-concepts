@@ -11,4 +11,8 @@ const CleanupFunction = () => {
   );
 };
 
+const RandomComponent = () => {
+  return <h1.
+}
+
 export default CleanupFunction;
