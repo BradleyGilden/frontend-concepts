@@ -5,12 +5,14 @@ const ToggleChallenge = () => {
   const [morning, setMorning] = useState(true);
 
   return (
-    {morning && <Greeting  />}
+    {morning && <Greeting status={morning} />}
   );
 };
 
 const Greeting = () => {
-
+  return (
+    <
+  );
 }
 
 export default ToggleChallenge;
