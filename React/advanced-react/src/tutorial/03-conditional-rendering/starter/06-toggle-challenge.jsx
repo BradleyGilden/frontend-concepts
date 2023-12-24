@@ -8,11 +8,11 @@ const ToggleChallenge = () => {
 
   const toggleButton = () => {
     if (morning) {
-      setMorning(true);
-      setMessage('change to night');
-    } else {
       setMorning(false);
       setMessage('change to morning');
+    } else {
+      setMorning(true);
+      setMessage('change to night');
     }
   }
 
