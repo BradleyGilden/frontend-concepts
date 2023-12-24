@@ -18,16 +18,16 @@ const ToggleChallenge = () => {
 
   return (
     <div>
-      {user && <Greeting status={morning} name={user.name} message={message} func={toggleButton} />}
+      {user && <Greeting status={morning} name={user.name} message={message} toggleButton={toggleButton} />}
     </div>
   );
 };
 
-const Greeting = ({status, name, message, func }) => {
+const Greeting = ({status, name, message, toggleButton }) => {
   return (
     <>
       { status ? (<h2>Good Morning {name}</h2>) : (<h2>Good Night {name}</h2>) }
-      <button type='button' className='btn' style={{ margin: '1rem' }} onClick={func}>{ message }</button>
+      <button type='button' className='btn' style={{ margin: '1rem' }} onClick={toggleButton}>{ message }</button>
     </>
   );
 }
