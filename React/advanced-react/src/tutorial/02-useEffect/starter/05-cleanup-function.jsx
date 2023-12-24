@@ -7,6 +7,7 @@ const CleanupFunction = () => {
     <button type='button' className='btn' onClick={() => setToggle(!toggle)}>
       toggle component
     </button>
+    {toggle && <RandomComponent />}
   </div>
   );
 };
