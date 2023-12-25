@@ -16,6 +16,9 @@ const CleanupFunction = () => {
 const RandomComponent = () => {
   useEffect(() => {
     console.log('hmm, this is interesting');
+    setInterval(() => {
+      console.log('hello from interval');
+    }, 1000);
   }, []);
   return <h1>hello there</h1>
 }
