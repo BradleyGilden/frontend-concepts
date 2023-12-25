@@ -34,6 +34,7 @@ const RandomComponent = () => {
       // code here
     }
     window.addEventListener('scroll', someFunc);
+    return () => window.removeEventListener('scroll', someFunc);
   }, []);
   return <h1>hello there</h1>
 }
