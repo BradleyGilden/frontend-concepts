@@ -30,14 +30,6 @@ const CleanupFunction = () => {
 
 const RandomComponent = () => {
   useEffect(() => {
-    const intId = setInterval(() => {
-      console.log('hello from interval');
-    }, 1000);
-    return () => {
-      {/* This runs when component is unmounted ( the cleanup ) */}
-      clearInterval(intId);
-      console.log('cleanup');
-    };
   }, []);
   return <h1>hello there</h1>
 }
