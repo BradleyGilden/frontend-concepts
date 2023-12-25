@@ -30,6 +30,10 @@ const CleanupFunction = () => {
 
 const RandomComponent = () => {
   useEffect(() => {
+    const someFunc = () => {
+      // code here
+    }
+    window.addEventListener('scroll', someFunc);
   }, []);
   return <h1>hello there</h1>
 }
