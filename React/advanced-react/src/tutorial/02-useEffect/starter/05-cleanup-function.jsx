@@ -20,6 +20,7 @@ const RandomComponent = () => {
       console.log('hello from interval');
     }, 1000);
     return () => {
+      {/* This runs when component is unmounted ( the cleanup ) */}
       clearInterval(intId);
       console.log('cleanup');
     };
