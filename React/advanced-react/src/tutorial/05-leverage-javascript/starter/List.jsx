@@ -6,3 +6,5 @@ const List = () => {
 	<div>My list</div>
 	);
 }
+
+export default List;
