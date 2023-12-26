@@ -1,1 +1,1 @@
-import data
+import { people } from '../../data'
