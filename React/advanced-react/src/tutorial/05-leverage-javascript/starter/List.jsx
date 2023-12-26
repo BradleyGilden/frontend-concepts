@@ -1,4 +1,4 @@
-import { people } from '../../data';
+import { people } from '../../../data';
 
 const List = () => {
 	console.log(people);
