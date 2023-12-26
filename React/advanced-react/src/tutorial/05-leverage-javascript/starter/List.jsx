@@ -1,10 +1,11 @@
 import { people } from '../../../data';
+import Person from './Person';
 
 const List = () => {
   return (
       people.map((person) => (
         <div key={person.id} className='item'>
-          <p>{person.name}</p>
+          <Person person={person} />
         </div>
       ))
   );
