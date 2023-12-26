@@ -2,7 +2,8 @@ const Person = ({person}) => {
 	return (
 		<div key={person.id} className='item'>
 			<h4>{person.name}</h4>
-			<p>{ person?.nickName ?? ''}</p>
+			{/* conditional returns */}
+			<p>{ person.nickName && ('Nickname: ' + person?.nickName ?? '')}</p>
 			<img style={{ width: '60px' }} src={person?.images?.[0]?.small?.url ?? ''}></img>
 		</div>
 	);
