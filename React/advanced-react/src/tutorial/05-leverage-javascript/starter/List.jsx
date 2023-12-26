@@ -2,7 +2,9 @@ import { people } from '../../../data';
 
 const List = () => {
 	return (
-	<div>My list</div>
+	people.map((person) => {
+		<h1>{person.name}</h1>
+	})
 	);
 }
 
