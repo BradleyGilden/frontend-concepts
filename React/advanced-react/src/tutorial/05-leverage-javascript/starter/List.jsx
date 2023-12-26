@@ -2,11 +2,13 @@ import { people } from '../../../data';
 
 const List = () => {
 	return (
-		people.map((person) => {
-			<div key={person.id} className='item'>
-				<p>{person.name}</p>
-			</div>
-		})
+    <div>
+      {people.map((person) => (
+        <div key={person.id} className='item'>
+          <p>{person.name}</p>
+        </div>
+      ))}
+    </div>
 	);
 }
 
