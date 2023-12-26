@@ -6,7 +6,7 @@ const Person = ({person}) => {
 			<h4>{person.name}</h4>
 			{/* conditional returns */}
 			<p>{ person.nickName && ('Nickname: ' + person?.nickName ?? '')}</p>
-			<img alt={ name } style={{ width: '60px' }} src={person?.images?.[0]?.small?.url ?? avatar }></img>
+			<img alt={ name } style={{ width: '60px', marginBottom: '0px', marginTop: '1rem' }} src={person?.images?.[0]?.small?.url ?? avatar }></img>
 		</div>
 	);
 }
