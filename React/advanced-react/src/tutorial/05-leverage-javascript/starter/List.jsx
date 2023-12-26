@@ -2,10 +2,11 @@ import { people } from '../../../data';
 
 const List = () => {
 	return (
-	people.map((person) => {
-		<h1>{person.name}</h1>
-		{console.log(person.name)}
-	})
+	<ul>
+		{people.map((person) => {
+			<li>{person?.name}</li>
+		})}
+	</ul>
 	);
 }
 
