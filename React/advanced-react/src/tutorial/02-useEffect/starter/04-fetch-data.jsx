@@ -17,7 +17,7 @@ const FetchData = () => {
       setUsers(users);
     }
     fetchData();
-  }, [])
+  }, []);
   return (
   <>
     <h3>Github Users</h3>

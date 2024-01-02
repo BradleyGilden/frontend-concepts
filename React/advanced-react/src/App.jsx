@@ -1,4 +1,4 @@
-import Starter from './tutorial/05-leverage-javascript/starter/List'
+import Starter from './tutorial/07-useRef/starter/01-useRef-basics'
 
 function App() {
   return (
