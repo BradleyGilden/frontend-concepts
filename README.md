@@ -12,3 +12,9 @@ This repository contains front-end concepts to cover in depth as milestones
 * TypeScript :x:
 * React :x:
 * Vue :x:
+
+## To disable CS50 default actions
+"git.enableSmartCommit": false,
+"git.autofetch": false,
+"git.autoCommit": "none",
+"git.enableCommitSigning": false
